@@ -10,6 +10,8 @@ Hi! I’m Zijie Jin, a Ph.D. candidate at the [School of Computer Science](https
 
 My research interests include video understanding, multimodal learning and embodied intelligence.
 
+If you’d like to explore a research idea together or pool GPU resources for a shared experiment, I’d love to hear from you.
+
 Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
 
 # ⭐ Representative Works

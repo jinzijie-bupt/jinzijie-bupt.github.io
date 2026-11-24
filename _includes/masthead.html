@@ -4,9 +4,10 @@
       <nav id="site-nav" class="greedy-nav">
         <button type="button" aria-label="Navigation menu"><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me">{{ site.author.name }}</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item"><a href="#about-me" target="_self">{{ site.author.name }}</a></li>
           {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            {% assign first_character = link.url | slice: 0 %}
+            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}"{% if first_character == '#' %} target="_self"{% endif %}>{{ link.title }}</a></li>
           {% endfor %}
         </ul>
         <ul class="hidden-links hidden"></ul>
