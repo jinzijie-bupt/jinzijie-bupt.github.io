@@ -1,0 +1,104 @@
+.profile-initials {
+  display: grid;
+  place-items: center;
+  width: min(9rem, 100%);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #e6edf3;
+  color: #28485f;
+  font: 500 2.75rem/1 Georgia, serif;
+}
+.profile_box .author__avatar img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.profile-contacts { max-width: 100%; }
+.university-mark {
+  display: block;
+  width: min(100%, 170px);
+  margin: .6rem 0 1rem;
+}
+.university-mark img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.profile-links {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: .2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.profile-links > li { display: block; margin: 0; padding: 0; }
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .18rem 0;
+  font-size: .95rem;
+  line-height: 1.4;
+  color: inherit;
+  text-decoration: none;
+}
+.profile-links a:hover, .profile-links a:focus-visible { text-decoration: underline; }
+.profile-links i { width: 1.35em; flex: none; text-align: center; font-style: normal; }
+.profile-links .fa-envelope { color: #3976ad; }
+.profile-links .fa-github { color: #633a87; }
+.profile-links .ai-orcid-square { color: #77a51c; }
+.profile-links .icon-huggingface::before { content: "🤗"; }
+.profile-links .icon-x::before { content: "𝕏"; color: #14171a; }
+.profile-links .fa-music { color: #191923; text-shadow: -1px -1px #25f4ee, 1px 1px #fe2c55; }
+.profile-links .fa-weixin { color: #0aa655; }
+@media (max-width: 924px) {
+  .profile-initials { width: 4rem; font-size: 1.65rem; }
+  .profile_box { display: flex; flex-wrap: wrap; }
+  .author__content { flex: 1; }
+  .profile-contacts { flex-basis: 100%; margin-top: .6rem; }
+  .profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .2rem 1rem;
+  }
+  .profile-links a { padding: .35rem 0; }
+}
+.page__content { max-width: 52rem; }
+.page__content h1 { color: #273f51; }
+.representative-works { padding-left: 1.2em; line-height: 1.5; }
+.work-label { color: #a61c1c; }
+.work-title { text-decoration: underline; }
+.work-venue { color: #1e7f3b; }
+.education-list { display: grid; gap: 1.5rem; }
+.education-entry {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(.7rem, 2vw, 1.4rem);
+}
+.school-seal {
+  width: clamp(3rem, 8vw, 5rem);
+  aspect-ratio: 1;
+  mask: var(--school-wordmark) left center / auto 100% no-repeat;
+}
+/* Each university's horizontal wordmark begins with its circular seal. */
+.bupt-seal {
+  --school-wordmark: url("../../images/bupt-logo.png");
+  background-color: #0b216f;
+}
+.ustb-seal {
+  --school-wordmark: url("../../images/ustb-wordmark.png");
+  background-color: #00558b;
+}
+.page__content .education-entry h2 {
+  margin: 0 0 .3rem;
+  color: #305c94;
+  font-size: 1.18rem;
+  line-height: 1.3;
+  border: 0;
+  padding: 0;
+}
+.education-entry p { margin: .2rem 0 0; }
