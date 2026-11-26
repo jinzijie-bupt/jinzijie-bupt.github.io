@@ -52,3 +52,9 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
     </div>
   </section>
 </div>
+
+# Collaborators
+{: #collaborators }
+
+- **Haoran Tao** — Institute of Automation, Chinese Academy of Sciences
+- **Chaomin Huang** — Peking University Shenzhen Research Institute
