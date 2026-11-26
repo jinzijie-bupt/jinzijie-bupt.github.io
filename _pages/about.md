@@ -56,5 +56,5 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
 # Collaborators
 {: #collaborators }
 
-- **Haoran Tao** — Institute of Automation, Chinese Academy of Sciences
-- **Chaomin Huang** — Peking University Shenzhen Research Institute
+- **[Haoran Tao](https://github.com/thr-0731)** — Institute of Automation, Chinese Academy of Sciences
+- **[Chaomin Huang](https://orcid.org/0009-0005-7156-6823)** — Peking University Shenzhen Research Institute
