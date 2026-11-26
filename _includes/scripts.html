@@ -1,3 +1,17 @@
 <script src="assets/js/main.min.js"></script>
+<script>
+  $(".profile-image-popup").magnificPopup({
+    type: "image",
+    closeOnContentClick: true,
+    focus: ".mfp-close",
+    callbacks: {
+      open: function () {
+        var label = this.currItem.el.text().trim() + " QR code";
+        this.wrap.attr({role: "dialog", "aria-modal": "true", "aria-label": label});
+        this.currItem.img.attr("alt", label);
+      }
+    }
+  });
+</script>
 {% if site.google_analytics_id %}{% include analytics.html %}{% endif %}
 {% if site.repository and site.enable_citation_stats %}{% include fetch_google_scholar_stats.html %}{% endif %}

@@ -53,6 +53,7 @@ author:
     - label: "WeChat"
       url: "images/wechat.jpg"
       icon: "fab fa-weixin"
+      image_popup: true
   google_plus      :
   keybase          :
   instagram        :

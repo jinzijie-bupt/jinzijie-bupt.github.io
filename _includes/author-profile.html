@@ -122,7 +122,7 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
 {% endif %}
       {% for link in author.profile_links %}
-        <li><a href="{{ link.url | escape }}"><i class="{{ link.icon }} fa-fw" aria-hidden="true"></i> {{ link.label | escape }}</a></li>
+        <li><a href="{{ link.url | escape }}"{% if link.image_popup %} class="profile-image-popup" target="_self" aria-label="View {{ link.label | escape }} QR code"{% endif %}><i class="{{ link.icon }} fa-fw" aria-hidden="true"></i> {{ link.label | escape }}</a></li>
       {% endfor %}
       {% if author.cv %}<li><a href="{{ author.cv }}">CV (PDF)</a></li>{% endif %}
     </ul>
