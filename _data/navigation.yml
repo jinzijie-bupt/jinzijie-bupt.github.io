@@ -5,5 +5,7 @@ main:
     url: "#selected-work"
   - title: "Education"
     url: "#education"
+  - title: "Research Experience"
+    url: "#research-experience"
   - title: "Collaborators"
     url: "#collaborators"
