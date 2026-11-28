@@ -122,7 +122,21 @@
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true"></i> Wikipedia</a></li>
 {% endif %}
       {% for link in author.profile_links %}
-        <li><a href="{{ link.url | escape }}"{% if link.image_popup %} class="profile-image-popup" target="_self" aria-label="View {{ link.label | escape }} QR code"{% endif %}><i class="{{ link.icon }} fa-fw" aria-hidden="true"></i> {{ link.label | escape }}</a></li>
+        <li>
+          <a href="{{ link.url | escape }}"{% if link.image_popup %} class="profile-image-popup" target="_self" aria-haspopup="dialog" aria-controls="contact-card-{{ forloop.index }}" aria-label="View {{ link.label | escape }} QR code"{% endif %}><i class="{{ link.icon }} fa-fw" aria-hidden="true"></i> {{ link.label | escape }}</a>
+          {% if link.image_popup %}
+            <dialog class="contact-card" id="contact-card-{{ forloop.index }}" aria-labelledby="contact-title-{{ forloop.index }}">
+              <div class="contact-card__body">
+                <header>
+                  <h2 id="contact-title-{{ forloop.index }}">Contact me on {{ link.label | escape }}</h2>
+                  <button type="button" autofocus>[Close]</button>
+                </header>
+                <img src="{{ link.url | escape }}" alt="{{ link.label | escape }} QR code for {{ author.name | escape }}" loading="lazy">
+                <p>Scan with {{ link.label | escape }} to add me.</p>
+              </div>
+            </dialog>
+          {% endif %}
+        </li>
       {% endfor %}
       {% if author.cv %}<li><a href="{{ author.cv }}">CV (PDF)</a></li>{% endif %}
     </ul>

@@ -54,6 +54,42 @@
 .profile-links .icon-x::before { content: "𝕏"; color: #14171a; }
 .profile-links .fa-music { color: #191923; text-shadow: -1px -1px #25f4ee, 1px 1px #fe2c55; }
 .profile-links .fa-weixin { color: #0aa655; }
+.contact-card {
+  position: fixed;
+  inset: 0;
+  width: min(370px, calc(100vw - 32px));
+  max-height: calc(100dvh - 24px);
+  margin: auto;
+  padding: 0;
+  border: 1px solid #e2e5e9;
+  border-radius: 12px;
+  background: #fff;
+  color: #434b54;
+  box-shadow: 0 12px 36px rgb(24 32 45 / 16%);
+  overflow: auto;
+}
+.contact-card::backdrop { background: rgb(0 0 0 / 18%); }
+.contact-card__body { padding: 16px 20px; }
+.contact-card header { display: flex; align-items: center; justify-content: space-between; gap: .5rem; }
+.contact-card h2 { margin: 0; color: #305c94; font-size: 1.1rem; line-height: 1.3; }
+.contact-card button {
+  padding: .5rem .2rem;
+  border: 0;
+  background: transparent;
+  color: #305c94;
+  font: inherit;
+  cursor: pointer;
+}
+.contact-card button:focus-visible { outline: 2px solid #305c94; outline-offset: 2px; }
+.contact-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: min(395px, 60dvh);
+  height: auto;
+  margin: .4rem auto;
+}
+.contact-card p { margin: .6rem 0 0; color: #58626e; font-size: .9rem; }
 @media (max-width: 924px) {
   .profile-initials { width: 4rem; font-size: 1.65rem; }
   .profile_box { display: flex; flex-wrap: wrap; }

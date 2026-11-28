@@ -1,16 +1,19 @@
 <script src="assets/js/main.min.js"></script>
 <script>
-  $(".profile-image-popup").magnificPopup({
-    type: "image",
-    closeOnContentClick: true,
-    focus: ".mfp-close",
-    callbacks: {
-      open: function () {
-        var label = this.currItem.el.text().trim() + " QR code";
-        this.wrap.attr({role: "dialog", "aria-modal": "true", "aria-label": label});
-        this.currItem.img.attr("alt", label);
-      }
-    }
+  document.querySelectorAll(".profile-image-popup").forEach(function (link) {
+    var card = document.getElementById(link.getAttribute("aria-controls"));
+    if (typeof card.showModal !== "function") return;
+
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      card.showModal();
+    });
+    card.querySelector("button").addEventListener("click", function () {
+      card.close();
+    });
+    card.addEventListener("click", function (event) {
+      if (event.target === card) card.close();
+    });
   });
 </script>
 {% if site.google_analytics_id %}{% include analytics.html %}{% endif %}
