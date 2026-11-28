@@ -129,6 +129,10 @@
   --school-wordmark: url("../../images/ustb-wordmark.png");
   background-color: #00558b;
 }
+.csu-seal {
+  background: url("../../images/csu-wordmark.png") left center / auto 100% no-repeat;
+  mask: none;
+}
 .page__content .education-entry h2 {
   margin: 0 0 .3rem;
   color: #305c94;

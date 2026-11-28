@@ -51,6 +51,14 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
       <p>Advised by <a href="https://saee.ustb.edu.cn/szdw/xsjs2/kzkxygcx/346c13ee30504a0cb64c4bc213693ee2.htm">Qing Li</a>.</p>
     </div>
   </section>
+  <section class="education-entry">
+    <span class="school-seal csu-seal" aria-hidden="true"></span>
+    <div>
+      <h2>Central South University</h2>
+      <p>Domestic exchange student, <a href="https://soa.csu.edu.cn/">School of Automation</a> · Sep 2024 – Jan 2025</p>
+      <p>I spent a semester taking courses at CSU during my undergraduate studies at USTB.</p>
+    </div>
+  </section>
 </div>
 
 # Collaborators
