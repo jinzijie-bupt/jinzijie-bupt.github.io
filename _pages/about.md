@@ -64,10 +64,14 @@ Email: [{{ site.author.email }}](mailto:{{ site.author.email }})
 # Research Experience
 {: #research-experience }
 
-## Institute of Automation, Chinese Academy of Sciences
-
-Research Intern · Feb 2025 – Aug 2025<br>
-Supervised by [Bin Tian](https://people.ucas.edu.cn/~tianbin).
+<section class="education-entry">
+  <img class="school-seal" src="{{ '/images/casia-emblem.jpg' | relative_url }}" alt="">
+  <div>
+    <h2>Institute of Automation, Chinese Academy of Sciences</h2>
+    <p>Research Intern · Feb 2025 – Aug 2025</p>
+    <p>Supervised by <a href="https://people.ucas.edu.cn/~tianbin">Bin Tian</a>.</p>
+  </div>
+</section>
 
 # Collaborators
 {: #collaborators }
